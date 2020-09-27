@@ -1,2 +1,2 @@
 # ifsl
-Released code for Interventional Few-Shot Learning (NIPS2020)
+[NeurIPS 2020] Released code for Interventional Few-Shot Learning.
