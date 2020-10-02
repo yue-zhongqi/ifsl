@@ -1,0 +1,58 @@
+# Few-shot dataset
+nClsEpisode: 5 # number of categories in each episode
+nSupport: 5 # number of samples per category in the support set
+nQuery: 15 # number of samples per category in the query set
+dataset: 'miniImageNet' # choices = ['miniImageNet', 'Cifar']
+
+# Network
+nStep: 3 # number of synthetic gradient steps
+architecture: 'WRN_28_10'  # choices = ['WRN_28_10', 'Conv64_4']
+batchSize: 1 # number of episodes in each batch
+
+# Optimizer
+lr: 0.0005 # lr is fixed
+weightDecay: 0.0005
+momentum: 0.9 
+
+# Training details
+expName: miniImageNet
+nbIter: 50000 # number of training iterations
+seed: 100 # can be reset with --seed
+gpu: '3' # can be reset with --gpu
+resumeFeatPth: '/data2/yuezhongqi/Model/sib/pretrain/ckpts/Mini-ImageNet/netFeatBest64.653.pth'
+coeffGrad: 0 # grad loss coeff
+
+# Testing
+nEpisode: 2000 # number of episodes for testing
+
+name: miniwrn5baseline
+
+# for pretrain model
+p_dataset: 'miniImagenet'
+p_method: 'simpleshotwide'
+p_model: 'wideres'
+image_size: 84
+
+deconfounding: False
+davg: False
+
+
+# for deconfounded sib
+n_splits: 1
+d_feature: 'ed'
+fusion: 'concat'
+sum_log: True
+classifier: 'single'
+use_counterfactual: False
+x_zero: False
+temp: 1
+logit_fusion: 'product'
+use_x_only: False
+feat_dim: 640
+
+preprocess_before_split: 'none'
+preprocess_after_split: 'none'
+is_cosine_feature: True
+normalize_before_center: False
+normalize_d: False
+normalize_ed: False
