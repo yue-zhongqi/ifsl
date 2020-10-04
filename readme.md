@@ -35,7 +35,7 @@ Apologize in advance for dirty code, which I will clean up gradually.
 Before the release of other methods, you can refer to SIB for IFSL implementation (which is really the same across all methods).
 
 - ~~Code release for SIB~~
-- Code release for LEO (Planned by 04/10/2020)
+- ~~Code release for LEO (Planned by 04/10/2020)~~
 - Code release for MTL (Planned by 06/10/2020)
 - Code release for fine-tuning, MN and MAML (Planned by 09/10/2020)
 - Code refactoring
