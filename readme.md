@@ -11,7 +11,7 @@ This project provides a strong Baseline with WRN28-10 and ResNet-10 backbone for
 
 This also includes implementation of our **NeurIPS 2020** paper  [Interventional Few-Shot Learning](https://arxiv.org/abs/2009.13000), which proposes IFSL classifier based on intervention P(Y|do(X)) to remove the confounding bias from pre-trained knowledge. Our IFSL classifier is generally applicable to all fine-tuning and meta-learning method, easy to plug in and involves no additional training steps.
 
-The codes are organized into four folders according to methods. The folder *finetune_MN_MAML* contains baseline and IFSL for fine-tuning, Matching Networks and MAML.
+The codes are organized into four folders according to methods. The folder *MAML_MN_FT* contains baseline and IFSL for fine-tuning, Matching Networks and MAML.
 
 ## Dependencies
 
@@ -32,12 +32,6 @@ After downloading the weights and datasets, you can follow the instructions in e
 
 Apologize in advance for dirty code, which I will clean up gradually.
 
-Before the release of other methods, you can refer to SIB for IFSL implementation (which is really the same across all methods).
-
-- ~~Code release for SIB~~
-- ~~Code release for LEO~~
-- ~~Code release for MTL~~
-- Code release for fine-tuning, MN and MAML (Planned by 25/10/2020)
 - Code refactoring
 - Improve documentation and optimize project setup procedures
 
