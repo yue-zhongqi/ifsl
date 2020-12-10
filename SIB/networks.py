@@ -174,28 +174,19 @@ def label_to_1hot(label, K):
 class dni_linear(nn.Module):
     def __init__(self, input_dims, dni_hidden_size=1024):
         super(dni_linear, self).__init__()
-        '''
+        
         self.layer1 = nn.Sequential(
                       nn.Linear(input_dims, dni_hidden_size),
                       nn.ReLU(),
                       nn.BatchNorm1d(dni_hidden_size)
                       )
-        '''
-        self.layer1 = nn.Sequential(
-                      nn.Linear(input_dims, dni_hidden_size),
-                      nn.ReLU()
-                      )
-        '''
+        
         self.layer2 = nn.Sequential(
                       nn.Linear(dni_hidden_size, dni_hidden_size),
                       nn.ReLU(),
                       nn.BatchNorm1d(dni_hidden_size)
                       )
-        '''
-        self.layer2 = nn.Sequential(
-                      nn.Linear(dni_hidden_size, dni_hidden_size),
-                      nn.ReLU()
-                      )
+        
         self.layer3 = nn.Linear(dni_hidden_size, input_dims)
 
     def forward(self, x):
