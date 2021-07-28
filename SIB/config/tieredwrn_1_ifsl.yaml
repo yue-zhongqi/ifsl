@@ -48,7 +48,7 @@ x_zero: False
 temp: 1
 logit_fusion: 'product'
 use_x_only: False
-feat_dim: 512
+feat_dim: 640
 
 preprocess_before_split: 'cl2n'
 preprocess_after_split: 'l2n'
